@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    border: 2px solid #333;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#resources p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+#base-layout {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+    gap: 5px;
+    border: 1px dashed #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.building {
+    width: 100px;
+    height: 100px;
+    background-color: #a0d0a0;
+    border: 1px solid #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    text-align: center;
+    cursor: grab;
+}
+
+.building-icon {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.resource-bar-container {
+    width: 200px;
+    height: 15px;
+    background-color: #ddd;
+    border: 1px solid #999;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.resource-bar {
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+.gold-bar {
+    background-color: gold;
+}
+
+.elixir-bar {
+    background-color: purple;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}

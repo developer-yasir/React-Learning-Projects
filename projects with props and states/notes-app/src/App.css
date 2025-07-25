@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.app {
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #dfe4ea;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.input-area input {
+  width: 400px;
+  padding: 15px;
+  font-size: 1rem;
+  border: 2px solid #dfe4ea;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input-area input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.input-area button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  margin-left: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+  background-color: #2980b9;
+}
+
+.draggable-note {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.draggable-note:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.note-content {
+  flex-grow: 1;
+}
+
+.note-textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  resize: none;
+}
+
+.note-textarea:focus {
+  outline: none;
+}
+
+.note-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.draggable-note:hover .note-controls {
+  opacity: 1;
+}
+
+.draggable-note.pinned {
+  box-shadow: 0 15px 25px rgba(52, 152, 219, 0.3);
+}
+
+.notes-container {
+  margin-top: 40px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tags-container {
+  margin-bottom: 20px;
+}
+
+.tags-container button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.tag-input {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.tag-input input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.tag-input button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.checklist {
+  margin-bottom: 10px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checklist-item input {
+  margin-right: 10px;
+}
+
+.checklist-input {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.checklist-input input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.checklist-input button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.dark-mode header h1 {
+  color: #ecf0f1;
+}
+
+.dark-mode .input-area input {
+  background-color: #34495e;
+  border-color: #7f8c8d;
+  color: #ecf0f1;
+}
+
+.dark-mode .input-area button {
+  background-color: #3498db;
+}
+
+.dark-mode .draggable-note {
+  background-color: #34495e;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .draggable-note.pinned {
+  box-shadow: 0 15px 25px rgba(52, 152, 219, 0.5);
+}
+
+.dark-mode .note-controls button {
+  color: #bdc3c7;
+}
+
+.dark-mode .note-controls button:hover {
+  color: #ecf0f1;
+}
+
+.dark-mode .tag {
+  background-color: #2c3e50;
+}
+
+.dark-mode .tag-input input {
+  background-color: #34495e;
+  border-color: #7f8c8d;
+  color: #ecf0f1;
+}
+
+.dark-mode .checklist-input input {
+  background-color: #34495e;
+  border-color: #7f8c8d;
+  color: #ecf0f1;
+}
+
+.note-controls button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+  color: #7f8c8d;
+  transition: color 0.3s ease;
+}
+
+.note-controls button:hover {
+  color: #34495e;
+}
+
+.color-picker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.color-picker::-webkit-color-swatch {
+  border-radius: 50%;
+  border: 2px solid #dfe4ea;
+}
+
+.color-picker::-moz-color-swatch {
+  border-radius: 50%;
+  border: 2px solid #dfe4ea;
+}
