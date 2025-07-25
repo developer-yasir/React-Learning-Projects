@@ -1,0 +1,39 @@
+/* index.css */
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    font-family: sans-serif;
+  }
+  .form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .form input, .form select {
+    flex: 1;
+    padding: 0.5rem;
+  }
+  .transaction-list {
+    margin-top: 1rem;
+  }
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  .transaction.income {
+    color: green;
+  }
+  .transaction.expense {
+    color: red;
+  }
+  .summary {
+    background: #f0f0f0;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+  }
+  
